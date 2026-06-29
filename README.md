@@ -77,13 +77,13 @@ http://localhost:8080/swagger-ui/index.html
 Email:
 
 ```text
-admin@email.com
+joao@raizes.com
 ```
 
 Senha:
 
 ```text
-123456
+raizes123
 ```
 
 ## Funcionalidades Implementadas
