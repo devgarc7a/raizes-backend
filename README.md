@@ -1,6 +1,6 @@
-# Raízes do Nordeste - API Back-end
+# Raízes do Nordeste - Backend
 
-API REST desenvolvida em Java e Spring Boot para o trabalho da faculdado, chamado Raízes do Nordeste.
+API REST desenvolvida em Java e Spring Boot para o trabalho multidisciplinar da faculdade, chamado Raízes do Nordeste.
 
 ## Tecnologias Utilizadas
 
@@ -14,25 +14,25 @@ API REST desenvolvida em Java e Spring Boot para o trabalho da faculdado, chamad
 
 ## Requisitos
 
-Antes de executar o projeto, é necessário ter:
+Antes de executar o projeto, é necessário ter instalado:
 
 - JDK 17 ou superior
 - PostgreSQL
 - Maven
-- IntelliJ IDEA (é o que eu usei)
+- IntelliJ IDEA (utilizado durante o desenvolvimento)
 
 ## Configuração do Banco de Dados
 
-Criar um banco de dados PostgreSQL:
+Criar o banco de dados PostgreSQL:
 
 ```sql
-CREATE DATABASE raizes_db;
+CREATE DATABASE raizes;
 ```
 
 Configurar o arquivo `application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/raizes_db
+spring.datasource.url=jdbc:postgresql://localhost:5432/raizes
 spring.datasource.username=postgres
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
@@ -40,25 +40,25 @@ spring.jpa.hibernate.ddl-auto=update
 
 ## Executando o Projeto
 
-1. Clonar o repositório:
+Clone o repositório:
 
 ```bash
 git clone https://github.com/devgarc7a/raizes-backend.git
 ```
 
-2. Entrar na pasta do projeto:
+Acesse a pasta do projeto:
 
 ```bash
 cd raizes-backend
 ```
 
-3. Executar a aplicação:
+Execute a aplicação:
 
 ```bash
 mvn spring-boot:run
 ```
 
-ou iniciar pela classe:
+Ou execute diretamente pela classe:
 
 ```text
 RaizesBackendApplication.java
@@ -66,21 +66,23 @@ RaizesBackendApplication.java
 
 ## Documentação da API
 
-Após iniciar a aplicação:
+Após iniciar a aplicação, a documentação Swagger estará disponível em:
 
-Swagger:
-
+```text
 http://localhost:8080/swagger-ui/index.html
+```
 
-## Login Padrão
+## Login de Demonstração
 
-Email:
+Utilize as credenciais abaixo para autenticação:
+
+**Email:**
 
 ```text
 joao@raizes.com
 ```
 
-Senha:
+**Senha:**
 
 ```text
 raizes123
@@ -91,23 +93,58 @@ raizes123
 - Autenticação com JWT
 - Cadastro de clientes
 - Cadastro de produtos
+- Cadastro de unidades
 - Cadastro de pedidos
 - Cadastro de pagamentos
-- Atualização automática do status do pedido após pagamento
+- Atualização automática do status do pedido após pagamento aprovado
 - Controle de estoque
 - Validação de estoque insuficiente
 - Programa de fidelidade
+- Documentação da API com Swagger
+- Testes da API utilizando Postman
+
+## Estrutura do Projeto
+
+O projeto foi desenvolvido utilizando arquitetura em camadas:
+
+- Controller → Responsável pelos endpoints da API
+- Service → Regras de negócio
+- Repository → Acesso ao banco de dados
+- Entity → Modelagem das entidades
+- Config → Configurações de segurança e JWT
 
 ## Coleção Postman
 
 A coleção de testes do Postman está disponível na pasta:
 
+```text
 /Postman/Trabalho Raízes - Testes.postman_collection.json
+```
 
-A coleção contém testes de autenticação, clientes, produtos, pedidos, pagamentos, estoque e cenários de erro, permitindo reproduzir os principais fluxos da API.
+A coleção contém testes de:
+
+- Autenticação
+- Clientes
+- Produtos
+- Pedidos
+- Pagamentos
+- Estoque
+- Cenários de erro
+
+Permitindo reproduzir os principais fluxos da aplicação.
+
+## Repositório
+
+GitHub:
+
+```text
+https://github.com/devgarc7a/raizes-backend
+```
 
 ## Autor
 
-João Garcia de Almeida Filho
+**João Garcia de Almeida Filho**
 
-Curso: Análise e Desenvolvimento de Sistemas - UNINTER
+Curso: Análise e Desenvolvimento de Sistemas – UNINTER
+
+Projeto desenvolvido para a disciplina Projeto Multidisciplinar – Trilha Back-End.
