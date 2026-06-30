@@ -98,6 +98,14 @@ raizes123
 - Validação de estoque insuficiente
 - Programa de fidelidade
 
+## Coleção Postman
+
+A coleção de testes do Postman está disponível na pasta:
+
+/Postman/Trabalho Raízes - Testes.postman_collection.json
+
+A coleção contém testes de autenticação, clientes, produtos, pedidos, pagamentos, estoque e cenários de erro, permitindo reproduzir os principais fluxos da API.
+
 ## Autor
 
 João Garcia de Almeida Filho
